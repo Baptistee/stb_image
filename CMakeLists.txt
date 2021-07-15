@@ -1,16 +1,10 @@
-project(stb_image)
+cmake_minimum_required(VERSION 3.5)
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}
-        ${PROJECT_A_DIRECTORY}/src)
+project(stb_image)
 
 add_library(${PROJECT_NAME}
         STATIC
         stb_image.cpp
-        )
-
-target_link_libraries(${PROJECT_NAME}
-        PUBLIC
-        spdlog
         )
 
 target_include_directories(${PROJECT_NAME}
